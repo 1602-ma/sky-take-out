@@ -9,6 +9,9 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
+/**
+ * @author feng
+ */
 @Data
 @Builder
 @NoArgsConstructor
@@ -16,16 +19,18 @@ import java.io.Serializable;
 @ApiModel(description = "员工登录返回的数据格式")
 public class EmployeeLoginVO implements Serializable {
 
-    @ApiModelProperty("主键值")
-    private Long id;
+	private static final long serialVersionUID = 7887656506246686651L;
 
-    @ApiModelProperty("用户名")
-    private String userName;
+	@ApiModelProperty("主键值")
+	private Long id;
 
-    @ApiModelProperty("姓名")
-    private String name;
+	@ApiModelProperty("用户名")
+	private String userName;
 
-    @ApiModelProperty("jwt令牌")
-    private String token;
+	@ApiModelProperty("姓名")
+	private String name;
+
+	@ApiModelProperty("jwt令牌")
+	private String token;
 
 }
