@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
- * 菜品
+ * 套餐
  * @author feng
  */
 @EqualsAndHashCode(callSuper = true)
@@ -15,28 +15,28 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName(value = "dish")
-public class Dish extends BaseEntity implements Serializable {
+@TableName(value = "setmeal")
+public class SetMeal extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private Long id;
 
-    /** 菜品名称 */
-    private String name;
-
-    /** 菜品分类id */
+    /** 分类id */
     private Long categoryId;
 
-    /** 菜品价格 */
+    /** 套餐名称 */
+    private String name;
+
+    /** 套餐价格 */
     private BigDecimal price;
 
-    /** 图片 */
-    private String image;
+    /** 状态 0:停用 1:启用 */
+    private Integer status;
 
     /** 描述信息 */
     private String description;
 
-    /** 0 停售 1 起售 */
-    private Integer status;
+    /** 图片 */
+    private String image;
 }

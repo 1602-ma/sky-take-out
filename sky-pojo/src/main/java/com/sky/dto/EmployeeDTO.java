@@ -4,19 +4,24 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * @author feng
+ */
 @Data
 public class EmployeeDTO implements Serializable {
 
-    private Long id;
+	private static final long serialVersionUID = 265603589514106109L;
 
-    private String username;
+	private Long id;
 
-    private String name;
+	private String username;
 
-    private String phone;
+	private String name;
 
-    private String sex;
+	private String phone;
 
-    private String idNumber;
+	private String sex;
+
+	private String idNumber;
 
 }

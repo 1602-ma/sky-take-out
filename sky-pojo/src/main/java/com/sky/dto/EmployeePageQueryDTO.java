@@ -4,16 +4,21 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * @author feng
+ */
 @Data
 public class EmployeePageQueryDTO implements Serializable {
 
-    //员工姓名
-    private String name;
+	private static final long serialVersionUID = -4725990807411608878L;
 
-    //页码
-    private int page;
+	/** 员工姓名 */
+	private String name;
 
-    //每页显示记录数
-    private int pageSize;
+	/** 页码 */
+	private Integer page;
+
+	/** 每页显示记录数 */
+	private Integer pageSize;
 
 }

@@ -1,6 +1,7 @@
 package com.sky.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,10 +20,10 @@ public class BaseEntity implements Serializable {
 
 	private static final long serialVersionUID = 4008700538621550160L;
 
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	@TableField(fill = FieldFill.INSERT)
 	private LocalDateTime createTime;
 
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	@TableField(fill = FieldFill.UPDATE)
 	private LocalDateTime updateTime;
 
 	private Long createUser;
